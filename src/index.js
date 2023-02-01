@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './views/Home';
 import { Students } from './views/Students';
 import { Events } from './views/Events';
+import { News } from './views/News';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <Route  path={'/'} element={<Home />} />
     <Route  path={'/students'} element={<Students />} />
     <Route  path={'/events'} element={<Events />} />
+    <Route  path={'/news'} element={<News />} />
     <Route />
     <Route />
     
