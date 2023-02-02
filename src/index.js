@@ -8,20 +8,20 @@ import { Home } from './views/Home';
 import { Students } from './views/Students';
 import { Events } from './views/Events';
 import { News } from './views/News';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <Header/>
   <Routes>
-    <Route  path={'/'} element={<Home />} />
+    <Route  path={'/home'} element={<Home />} />
     <Route  path={'/students'} element={<Students />} />
     <Route  path={'/events'} element={<Events />} />
     <Route  path={'/news'} element={<News />} />
-    <Route />
-    <Route />
-    
   </Routes>
-    
+  <Footer/>
   </BrowserRouter>
   
 
