@@ -1,10 +1,10 @@
 import React from "react";
 
 
-export const News = ()=>{
+export const Login = ()=> {
     return<>
         <main>
-            <h1>This is News page</h1>
+            <h1>This is Login page</h1>
         </main>
     </>
 }

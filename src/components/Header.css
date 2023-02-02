@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.ul-container{
+    display: flex;
+    background-color:rgb(227, 222, 209);
+    justify-content: center;
+    list-style: none;
+    padding-top: 20px;
+    height: 60px;
+}
+.link-item{
+    padding: 2px 2vw;
+    text-decoration: aliceblue;
+    font-size: 20px;
+}
+.btn{
+    padding: 5px 15px;
+    background-color:rgb(205, 196, 178) ;
+    border-style: none;
+    font-size: 20px;
+
+}
