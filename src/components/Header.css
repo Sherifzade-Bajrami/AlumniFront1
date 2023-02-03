@@ -4,7 +4,7 @@
 }
 .ul-container{
     display: flex;
-    background-color:rgb(227, 222, 209);
+    background-color:rgb(230, 228, 227);
     justify-content: center;
     list-style: none;
     padding-top: 20px;
@@ -12,17 +12,22 @@
 }
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(152, 150, 150);
 }
 .link-item{
-    padding: 2px 2vw;
+    padding: 8px 3vw;
     text-decoration: aliceblue;
     font-size: 20px;
 }
 .btn{
-    padding: 5px 15px;
-    background-color:rgb(205, 196, 178) ;
+    padding: 5px 20px;
+    background-color:rgb(251, 251, 250) ;
     border-style: none;
     font-size: 20px;
-
+}
+.img-h{
+    padding-left: 20px;
+}
+.link-item :hover{
+    color: black;
 }
