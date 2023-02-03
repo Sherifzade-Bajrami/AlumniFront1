@@ -10,6 +10,10 @@
     padding-top: 20px;
     height: 60px;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 .link-item{
     padding: 2px 2vw;
     text-decoration: aliceblue;
