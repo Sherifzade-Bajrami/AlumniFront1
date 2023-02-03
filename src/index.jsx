@@ -23,7 +23,7 @@ root.render(
     <Route  path={'/news'} element={<News />} />
     <Route  path={'/login'} element={<Login />} />
   </Routes>
-  <Footer/>
+  
   </BrowserRouter>
   
 

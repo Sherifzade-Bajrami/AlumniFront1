@@ -12,7 +12,7 @@
 }
 a {
     text-decoration: none;
-    color: rgb(152, 150, 150);
+    color: rgb(111, 110, 110);
 }
 .link-item{
     padding: 8px 3vw;
@@ -24,6 +24,7 @@ a {
     background-color:rgb(251, 251, 250) ;
     border-style: none;
     font-size: 20px;
+    border-radius: 5px;
 }
 .img-h{
     padding-left: 20px;
