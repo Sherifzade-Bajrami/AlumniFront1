@@ -24,7 +24,10 @@ export const Students = ()=>{
 
    return<>
     <form  onSubmit={handleSubmit}>
-
+      <section style={{
+        display:"flex"
+      }}>
+      <div>
       <div>
         <label htmlFor="username">Username:</label>
         <input 
@@ -79,7 +82,9 @@ export const Students = ()=>{
           onChange={(e) => setCity(e.target.value)}
         />
       </div>
-      <div>
+      </div>
+     <div>
+     <div>
         <label htmlFor="state">State:</label>
         <input
           type="state"
@@ -124,8 +129,11 @@ export const Students = ()=>{
           onChange={(e) => setJobStatus(e.target.value)}
         />
       </div>
-
-      <button text="Click Me">Apply</button>
+     </div>
+      </section>
     </form>
+    <button text="Click Me">Apply</button>
+    <br></br><br></br>
+    
     </>
 }
