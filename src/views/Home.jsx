@@ -16,7 +16,7 @@ export const Home = ()=>{
       </section>  
       <section
       style={{
-        backgroundColor:"rgb(230, 228, 227)",
+        backgroundColor:"rgb(240, 239, 239)",
         height:"600px"
       }}
       >
@@ -30,6 +30,7 @@ export const Home = ()=>{
                 fontFamily:"monospace",
                 color:"black",
                 letterSpacing:"2px"
+                
             }}>Our exclusive events serve as a networking platform for members and partners to connect, learn from one another,
              and grow together whether in-person or online. From our annual Leadership Summit to our Influencers Dinners and virtual 
              SocietyCast series, we unite and amplify the voices of the most brilliant Latino minds in America.</h1>
