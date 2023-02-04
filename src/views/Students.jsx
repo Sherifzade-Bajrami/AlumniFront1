@@ -27,7 +27,9 @@ export const Students = ()=>{
       <section style={{
         display:"flex"
       }}>
-      <div>
+      <div style={{
+        paddingRight:"100px"
+      }}>
       <div>
         <label htmlFor="username">Username:</label>
         <input 
