@@ -1,0 +1,21 @@
+body{
+  height: 600px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 10px;
+  }
+  
+  th,
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: lightgray;
+  }
+  
