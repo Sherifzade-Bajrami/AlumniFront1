@@ -1,25 +1,30 @@
-body{
-  height: 400px;
-  background-color:rgb(249, 247, 246);
-  
-  
-}
+  label {
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    margin: 5px;
+    position: relative;
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    
-   
   }
-  
-  th,
-  td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
-  
-  th {
-    background-color: rgb(206, 224, 207);
+
+  button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
   }
-  
+
+  input{
+    font-size: 18px;
+    padding: 3px;
+    margin: 5px;
+  }
+
+
