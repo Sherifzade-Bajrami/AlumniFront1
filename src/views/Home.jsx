@@ -35,6 +35,20 @@ export const Home = ()=>{
              SocietyCast series, we unite and amplify the voices of the most brilliant Latino minds in America.</h1>
              <br></br>
              <hr></hr>
+             <section
+             style={{
+                paddingTop:"50px",
+                padding:" 60px 7vw"
+             }}
+
+             >
+             <img src={require('./img/news.png')} height={'300'} width={'400'} alt='' className="img-h"/>
+             <img src={require('./img/events.jpg')} height={'300'} width={'400'} alt='' className="img-h"/>
+             <img src={require('./img/students.jpg')} height={'300'} width={'400'} alt='' className="img-h"/>
+
+
+                
+             </section>
 
       </section>
        

@@ -6,7 +6,7 @@ export const Header =() =>{
     return<>
         <header>
             <ul className="ul-container">
-                <img src={require('./img/logo1.png')} height={'50'} width={300} alt='' className="img-h"/>
+                <img src={require('./img/logo1.png')} height={'50'} width={'300'} alt='' className="img-h"/>
                 <li className="link-item"><Link to ="/home">Home</Link></li>
                 <li className="link-item"><Link to ="/students">Students</Link></li>
                 <li className="link-item"><Link to ="/events">Events</Link></li>
