@@ -1,11 +1,15 @@
 body{
-  height: 600px;
+  height: 400px;
+  background-color:rgb(249, 247, 246);
+  
+  
 }
 
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    border-radius: 10px;
+    
+   
   }
   
   th,
@@ -16,6 +20,6 @@ table {
   }
   
   th {
-    background-color: lightgray;
+    background-color: rgb(206, 224, 207);
   }
   

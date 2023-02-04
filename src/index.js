@@ -8,6 +8,7 @@ import { Home } from './views/Home';
 import { Students } from './views/Students';
 import { Events } from './views/Events';
 import { News } from './views/News';
+import { Partners } from './views/Partners';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
@@ -20,6 +21,7 @@ root.render(
     <Route  path={'/students'} element={<Students />} />
     <Route  path={'/events'} element={<Events />} />
     <Route  path={'/news'} element={<News />} />
+    <Route  path={'/partners'} element={<Partners />} />
   </Routes>
   <Footer/>
   </BrowserRouter>

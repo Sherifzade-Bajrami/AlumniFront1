@@ -5,9 +5,12 @@ import "./css/Students.css";
 
 export const Students = ()=>{
     const [data, setData] = useState([
-        { id: 1, name: 'John Doe', age: 32, location: 'New York' },
-        { id: 2, name: 'Jane Doe', age: 29, location: 'London' },
-        { id: 3, name: 'Jim Brown', age: 40, location: 'Paris' },
+        { id: 1, name: ' ', surname: ' ', birthday: ' ',email:"",contact:"",city:"",state:"",university:"",
+          avgrade:"",gender:"",jobstatus:""},
+          { id: 1, name: ' ', surname: ' ', birthday: ' ',email:"",contact:"",city:"",state:"",university:"",
+          avgrade:"",gender:"",jobstatus:""},
+          { id: 1, name: ' ', surname: ' ', birthday: ' ',email:"",contact:"",city:"",state:"",university:"",
+          avgrade:"",gender:"",jobstatus:""},
       ]);
     return<>
         <table>
@@ -15,8 +18,16 @@ export const Students = ()=>{
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Age</th>
-          <th>Location</th>
+          <th>Surname</th>
+          <th>Birthday</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>City</th>
+          <th>State</th>
+          <th>University</th>
+          <th>AvGrade</th>
+          <th>Gender</th>
+          <th>JobStatus</th>
         </tr>
       </thead>
       <tbody>
@@ -24,8 +35,23 @@ export const Students = ()=>{
           <tr key={row.id}>
             <td>{row.id}</td>
             <td>{row.name}</td>
-            <td>{row.age}</td>
-            <td>{row.location}</td>
+            <td>{row.surname}</td>
+            <td>{row.birthday}</td>
+            <td>{row.email}</td>
+            <td>{row.contact}</td>
+            <td>{row.city}</td>
+            <td>{row.state}</td>
+            <td>{row.university}</td>
+            <td>{row.avgrade}</td>
+            <td>{row.gender}</td>
+            <td>{row.jobstatus}</td>
+
+
+
+
+
+
+
           </tr>
         ))}
       </tbody>
