@@ -23,118 +23,56 @@ export const Students = ()=>{
     }
 
    return<>
-    <form  onSubmit={handleSubmit}>
-      <section style={{
-        display:"flex"
-      }}>
-      <div style={{
-        paddingRight:"100px"
-      }}>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input 
-          type="text"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+   <h1 style={{textAlign:"center",color:"GrayText",paddingTop:"20px"}}>Apply Now</h1>
+    <form style={{paddingTop:"50px"}} onSubmit={handleSubmit}>
+      <section style={{display:"flex"}}>
+      <div style={{ display:"flex", flexDirection:"column",paddingLeft:"400px"}}>
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="username">Username:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="text" id="username" value={username} placeholder=" Your username" onChange={(e) => setUsername(e.target.value)}/>
+
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="surname">Surname:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="surname" id="surname" value={surname} placeholder=" Your surname" onChange={(e) => setSurname(e.target.value)}/>
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="birthday">Birthday:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="birthday" id="birthday" value={birthday} placeholder=" dd/mm/yy"  onChange={(e) => setBirthday(e.target.value)}/>
+      
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="email">Email:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="email" id="email" value={email} placeholder=" youremail@gmail.com" onChange={(e) => setEmail(e.target.value)}/>
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="contact">Contact:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}}  type="contact" id="contact" value={contact} placeholder=" 000-000-000" onChange={(e) => setContact(e.target.value)}/>
+     
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="city">City:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="city" id="city" value={city} placeholder=" City" onChange={(e) => setCity(e.target.value)} />
       </div>
-      <div>
-        <label htmlFor="surname">Surname:</label>
-        <input
-          type="surname"
-          id="surname"
-          value={surname}
-          onChange={(e) => setSurname(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="birthday">Birthday:</label>
-        <input
-          type="birthday"
-          id="birthday"
-          value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="contact">Contact:</label>
-        <input
-          type="contact"
-          id="contact"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="city">City:</label>
-        <input
-          type="city"
-          id="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-      </div>
-      </div>
-     <div>
-     <div>
-        <label htmlFor="state">State:</label>
-        <input
-          type="state"
-          id="state"
-          value={state}
-          onChange={(e) => setState(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="university">University:</label>
-        <input
-          type="university"
-          id="university"
-          value={university}
-          onChange={(e) => setUniversity(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="AvGrade">AvGrade:</label>
-        <input
-          type="AvGrade"
-          id="AvGrade"
-          value={AvGrade}
-          onChange={(e) => setAvGrade(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="gender">Gender:</label>
-        <input
-          type="gender"
-          id="gender"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="JobStatus">JobStatus:</label>
-        <input
-          type="JobStatus"
-          id="JobStatus"
-          value={JobStatus}
-          onChange={(e) => setJobStatus(e.target.value)}
-        />
-      </div>
+      
+      <div style={{ display:"flex", flexDirection:"column", paddingLeft:"50px"}}>
+
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="state">State:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="state" id="state" value={state} placeholder=" State" onChange={(e) => setState(e.target.value)}/>
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="university">University:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="university" id="university" value={university} placeholder=" University" onChange={(e) => setUniversity(e.target.value)}/>
+      
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="AvGrade">AvGrade:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="AvGrade" id="AvGrade" value={AvGrade} onChange={(e) => setAvGrade(e.target.value)}/>
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="gender">Gender:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="gender" id="gender" value={gender} onChange={(e) => setGender(e.target.value)}/>
+     
+        <label style={{fontWeight:"bold",fontSize:"18px"}} htmlFor="JobStatus">JobStatus:</label>
+        <input style={{width:"300px",height:"40px",borderRadius:"10px"}} type="JobStatus" id="JobStatus" value={JobStatus} onChange={(e) => setJobStatus(e.target.value)} />
+
+        <br>
+        </br>
+        <button style={{backgroundColor:"black",color:"white", width:"150px",height:"40px",borderRadius:"8px",marginLeft:"150px"}} type="submit">Apply</button>
+      
      </div>
       </section>
     </form>
-    <button text="Click Me">Apply</button>
+   
     <br></br><br></br>
     
     </>

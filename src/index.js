@@ -11,6 +11,7 @@ import { News } from './views/News';
 import { Partners } from './views/Partners';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { Login } from './views/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
     <Route  path={'/events'} element={<Events />} />
     <Route  path={'/news'} element={<News />} />
     <Route  path={'/partners'} element={<Partners />} />
+    <Route  path={'/login'} element={<Login />} />
   </Routes>
   <Footer/>
   </BrowserRouter>

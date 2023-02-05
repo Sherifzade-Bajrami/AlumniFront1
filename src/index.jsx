@@ -11,6 +11,7 @@ import { News } from './views/News';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Login } from './views/Login';
+import { Partners } from './views/Partners';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,11 +23,10 @@ root.render(
     <Route  path={'/events'} element={<Events />} />
     <Route  path={'/news'} element={<News />} />
     <Route  path={'/login'} element={<Login />} />
+    <Route  path={'/partners'} element={<Partners />} />
   </Routes>
-  
+  <Footer/>
   </BrowserRouter>
-  
-
 );
 
 // If you want to start measuring performance in your app, pass a function
