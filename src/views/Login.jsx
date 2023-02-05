@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 
 =======
@@ -64,3 +65,5 @@ const onSubmit = async data => {
         </main>
     </>
 }
+=======
+>>>>>>> 7a107338c7dc2a3d11801edfc533dda7bd200740
