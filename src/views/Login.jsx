@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react";
 
-=======
-import axios from "axios";
-import React from "react";
-import { useForm } from "react-hook-form";
->>>>>>> 78657d2abab1341e15cd5ee4c0260a1d89af830e
 
 
 
@@ -39,31 +32,5 @@ export const Login = ()=> {
        </form>
      </div>
        
-    const { register, handleSubmit } = useForm({ shouldUseNativeValidation: true });
-
-const onSubmit = async data => { 
-    axios.post('https://localhost:7189/api/Authentication/login', data ,
-   { headers: {'Content-Type': 'application/json'
-  //  'Authorization': localStorage.getItem('token')
-  },})
-        .then(response => console.log(response));
-        // localStorage.setItem('token ', JSON.stringify(response))
- };
-
-    return<>
-        <main>
-            
-        <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        {...register("Email", { required: "Please enter your first name." })} // custom message
-      />
-        <input
-        {...register("Password", { required: "Please enter your Password.",minLength : (8) })} // custom message
-      />
-      <input type="submit" />
-    </form>
-        </main>
     </>
 }
-=======
->>>>>>> 7a107338c7dc2a3d11801edfc533dda7bd200740
