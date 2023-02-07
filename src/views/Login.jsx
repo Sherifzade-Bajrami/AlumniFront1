@@ -1,37 +1,43 @@
-import React, { useState } from "react";
-
-
+import axios from "axios";
+import { useForm } from "react-hook-form";
 
 
 export const Login = ()=> {
-    const { email, setEmail } = useState('');
-    const { password, setPassword } = useState('');
 
-    const handleSubmit =(e)=>{
+  const { register, handleSubmit } = useForm();
 
-      e.prevenetDefault();
-      console.log(email);
+const onSubmit = async data => { 
 
-    }
+    axios.post('https://localhost:7189/api/Authentication/login', data ,
+   { headers: {'Content-Type': 'application/json'
+  //  'Authorization': localStorage.getItem('token')
+  },})
+      .then(response => ( localStorage.setItem('token ', JSON.stringify(response.data.token)) ));
+       
+ };
 
-    return<>
+    return(
     <div style={{ display:"flex", alignItems:"center",flexDirection:"column", padding:"80px 0"}}>
        <div style={{padding:"5rem",border:"1px solid black",borderRadius:"30px",backgroundColor:"rgb(240, 240, 240)"}}>
-       <form style={{flexDirection:"column",display:"flex"}} onSubmit={handleSubmit}>
+       <form  style={{flexDirection:"column",display:"flex"}} onSubmit={handleSubmit(onSubmit)}>
         
         <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="email">Email</label>
-        <input style={{width:"300px",height:"40px",borderRadius:"10px"}}  value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="  youremail@gmail.com" id="email" name="email" />
+
+        <input {...register("Email",{ required: "Please enter your Email." })} type="email" style={{width:"300px",height:"40px", paddingLeft:"5px",borderRadius:"10px"}} placeholder="youremail@gmail.com" id="email" />
         
         <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="password">Password</label>
-        <input style={{width:"300px",height:"40px",borderRadius:"10px"}}  value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder="  **********" id="password" name="password" />
+
+        <input style={{width:"300px",height:"40px", paddingLeft:"5px",borderRadius:"10px"}} 
+         {...register("Password", { required: "Please enter your Password.",minLength : (8) })} 
+        type="password" placeholder="********" id="password"  />
         
        
         
-        <button style={{backgroundColor:"black",color:"white", width:"150px",height:"40px",borderRadius:"8px",margin:"40px 0 0 70px"}} type="submit">Log in</button>
+        <button type="submit" style={{backgroundColor:"black",color:"white", width:"150px",height:"40px",borderRadius:"8px",margin:"40px 0 0 70px"}} >Submit</button>
        
        </form>
      </div>
      </div>
        
-    </>
+   )
 }
