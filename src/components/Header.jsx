@@ -11,7 +11,9 @@ export const Header =() =>{
                 <li className="link-item"><Link to ="/students">Students</Link></li>
                 <li className="link-item"><Link to ="/events">Events</Link></li>
                 <li className="link-item"><Link to ="/news">News</Link></li>
-                <li className="link-item"><Link to ="/partners">Partners</Link></li>
+                <li className="link-item"><Link to="/partners">Partners</Link></li>
+                <li className="link-item"><a href ="https://localhost:7189/Studentis">List of Users</a></li>
+
                 <li className="link-item"><button className="btn"><Link to='/login'>Login</Link></button></li>
             </ul>
         </header>

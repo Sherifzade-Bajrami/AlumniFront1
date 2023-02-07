@@ -43,7 +43,7 @@ export const Home = ()=>{
              }}
 
              >
-             <img src={require('./img/news.png')} height={'300'} width={'400'} alt='' className="img-h"/>
+             <img src={require('./img/events.jpg')} height={'300'} width={'400'} alt='' className="img-h"/>
              <img src={require('./img/events.jpg')} height={'300'} width={'400'} alt='' className="img-h"/>
              <img src={require('./img/students.jpg')} height={'300'} width={'400'} alt='' className="img-h"/>
 

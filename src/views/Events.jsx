@@ -6,7 +6,7 @@ export const Events = ()=>{
         <h1 style={{textAlign:"center",paddingTop:"20px",color:"GrayText"}}>Events</h1>
        <section style={{paddingLeft:"80px",paddingTop:"50px"}}>
         <div style={{display:"flex"}} >
-        <img src={require('./img/news.png')} height={'300'} width={'300'} alt='' className="img-h"/>
+        <img src={require('./img/events.jpg')} height={'300'} width={'300'} alt='' className="img-h"/>
         <div>
         <h1 style={{paddingLeft:"40px"}} >Title</h1>
         <h3 style={{paddingLeft:"40px",paddingTop:"10px"}}>Author</h3>   
@@ -18,7 +18,7 @@ export const Events = ()=>{
         </div>
         <br></br>
         <div style={{display:"flex"}} >
-        <img src={require('./img/news.png')} height={'300'} width={'300'} alt='' className="img-h"/>
+        <img src={require('./img/events.jpg')} height={'300'} width={'300'} alt='' className="img-h"/>
         <div>
         <h1 style={{paddingLeft:"40px"}} >Title</h1>
         <h3 style={{paddingLeft:"40px",paddingTop:"10px"}}>Author</h3>   
@@ -30,7 +30,7 @@ export const Events = ()=>{
         </div>
         <br></br>
         <div style={{display:"flex"}} >
-        <img src={require('./img/news.png')} height={'300'} width={'300'} alt='' className="img-h"/>
+        <img src={require('./img/events.jpg')} height={'300'} width={'300'} alt='' className="img-h"/>
         <div>
         <h1 style={{paddingLeft:"40px"}} >Title</h1>
         <h3 style={{paddingLeft:"40px",paddingTop:"10px"}}>Author</h3>   
