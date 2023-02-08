@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Header.css';
 
-export const Header =() =>{
+export const Header = () => {
+    var token = JSON.parse(localStorage.getItem('token'))
+   
+    const onSubmit = () => { 
+     localStorage.clear()
+     };
     return<>
         <header>
             <ul className="ul-container">
@@ -14,7 +19,10 @@ export const Header =() =>{
                 <li className="link-item"><Link to="/partners">Partners</Link></li>
                 <li className="link-item"><a href ="https://localhost:7189/Studentis">List of Users</a></li>
 
-                <li className="link-item"><button className="btn"><Link to='/login'>Login</Link></button></li>
+                {token  == null && (<li className="link-item"><button className="btn"><Link to='/login'>Login</Link></button></li>
+                )}
+                 {token  !== null && (<li className="link-item"><button type="submit" onClick={()=>onSubmit()} className="btn">Logout</button></li>
+                    )}
             </ul>
         </header>
     

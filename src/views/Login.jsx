@@ -13,7 +13,9 @@ const onSubmit = async data => {
    { headers: {'Content-Type': 'application/json'
   //  'Authorization': localStorage.getItem('token')
   },})
-      .then(response => ( localStorage.setItem('token ', JSON.stringify(response.data.token)) ));
+      .then(response => (localStorage.setItem('token', JSON.stringify(response.data.token)),
+      localStorage.setItem('user', JSON.stringify(response.data.id)),localStorage.setItem('email', JSON.stringify(response.data.email)),localStorage.setItem('name', JSON.stringify(response.data.name)))
+      );
        
  };
 

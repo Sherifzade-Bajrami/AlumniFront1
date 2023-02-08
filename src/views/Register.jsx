@@ -8,10 +8,10 @@ export const Register = ()=> {
 
 const onSubmit = async data => { 
 
-    axios.post('https://localhost:7189/api/Authentication/login', data ,
+    axios.post('https://localhost:7189/api/Authentication/register', data ,
    { headers: {'Content-Type': 'application/json'
-  //  'Authorization': localStorage.getItem('token')
-  },})
+  
+  },}).then(response => ( localStorage.setItem('token ', JSON.stringify(response.data.token)) ));
        
  };
 
@@ -20,9 +20,9 @@ const onSubmit = async data => {
        <div style={{padding:"5rem",border:"1px solid black",borderRadius:"30px",backgroundColor:"rgb(240, 240, 240)"}}>
        <form  style={{flexDirection:"column",display:"flex"}} onSubmit={handleSubmit(onSubmit)}>
 
-       <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="email">Username</label>
+       <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="username">Username</label>
 
-       <input {...register("Username",{ required: "Please enter your username." })} type="email" style={{width:"300px",height:"40px", paddingLeft:"5px",borderRadius:"10px"}} placeholder="username" id="email" />
+       <input {...register("Username",{ required: "Please enter your username." })} type="text" style={{width:"300px",height:"40px", paddingLeft:"5px",borderRadius:"10px"}} placeholder="username" id="username" />
 
         
         <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="email">Email</label>

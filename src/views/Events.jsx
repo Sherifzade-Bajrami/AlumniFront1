@@ -1,7 +1,24 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 
-export const Events = ()=>{
+export const Events = () => {
+
+      const [events, setEvents] = useState([]);
+
+    var token = JSON.parse(localStorage.getItem('token'))
+    useEffect(() => (
+        axios.get('https://localhost:7189/api/EventsAPI',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': "Bearer " +token
+        },
+      }).then(response => (setEvents(response.data)))
+
+    ), [])
+    console.log(events);
+    
     return<>
         <h1 style={{textAlign:"center",paddingTop:"20px",color:"GrayText"}}>Events</h1>
        <section style={{paddingLeft:"80px",paddingTop:"50px"}}>

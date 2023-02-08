@@ -1,7 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 
-export const News = ()=>{
+export const News = () => {
+       const [news, setNews] = useState([]);
+
+    var token = JSON.parse(localStorage.getItem('token'))
+    useEffect(() => (
+        axios.get('https://localhost:7189/api/NewsAPI',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': "Bearer " +token
+        },
+      }).then(response => (setNews(response.data)))
+
+    ), [])
      var obj = [{
            Author : "Author",
           Image:'/img/news.png',
@@ -34,9 +48,9 @@ export const News = ()=>{
         display:"flex"
 
          }}>
-              {obj.map((item, index) => (
+              {news?.map((item, index) => (
               <div >
-                        <img src={item.Image} height={'300'} width={'300'} alt='' className="img-h"/>
+                        <img src="./img/news.png" height={'300'} width={'300'} alt='' className="img-h"/>
                         <h3 style={{ paddingLeft: "20px" }}>{item.Title}
         <span style={{paddingLeft:"220px"}}>{item.Date}</span>
         </h3>
