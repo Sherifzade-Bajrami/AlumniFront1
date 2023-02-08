@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 
 
-export const Login = ()=> {
+export const Register = ()=> {
 
   const { register, handleSubmit } = useForm();
 
@@ -13,7 +12,6 @@ const onSubmit = async data => {
    { headers: {'Content-Type': 'application/json'
   //  'Authorization': localStorage.getItem('token')
   },})
-      .then(response => ( localStorage.setItem('token ', JSON.stringify(response.data.token)) ));
        
  };
 
@@ -21,6 +19,11 @@ const onSubmit = async data => {
     <div style={{ display:"flex", alignItems:"center",flexDirection:"column", padding:"80px 0"}}>
        <div style={{padding:"5rem",border:"1px solid black",borderRadius:"30px",backgroundColor:"rgb(240, 240, 240)"}}>
        <form  style={{flexDirection:"column",display:"flex"}} onSubmit={handleSubmit(onSubmit)}>
+
+       <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="email">Username</label>
+
+       <input {...register("Username",{ required: "Please enter your username." })} type="email" style={{width:"300px",height:"40px", paddingLeft:"5px",borderRadius:"10px"}} placeholder="username" id="email" />
+
         
         <label style={{padding:"0.5rem 0",fontSize:"20px" }} htmlFor="email">Email</label>
 
@@ -35,7 +38,7 @@ const onSubmit = async data => {
        
         
         <button type="submit" style={{backgroundColor:"black",color:"white", width:"150px",height:"40px",borderRadius:"8px",margin:"40px 0 0 70px"}} >Submit</button>
-        <p style={{color:"black",paddingTop:"30px",paddingLeft:"60px"}}>Not a member?<Link to="register">Register</Link></p>
+       
        </form>
      </div>
      </div>
