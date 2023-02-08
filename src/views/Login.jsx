@@ -35,7 +35,7 @@ const onSubmit = async data => {
        
         
         <button type="submit" style={{backgroundColor:"black",color:"white", width:"150px",height:"40px",borderRadius:"8px",margin:"40px 0 0 70px"}} >Submit</button>
-        <p style={{color:"black",paddingTop:"30px",paddingLeft:"60px"}}>Not a member?<Link to="register">Register</Link></p>
+        <p style={{color:"black",paddingTop:"30px",paddingLeft:"60px"}}>Not a member?<Link to="register">Register here</Link></p>
        </form>
      </div>
      </div>
