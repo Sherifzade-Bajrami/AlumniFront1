@@ -16,8 +16,8 @@ export const Events = ()=>{
         <p style={{paddingLeft:"40px"}}>deadline</p>
         </div>
         </div>
-        <br></br>
-        <div style={{display:"flex"}} >
+        
+        <div style={{display:"flex",paddingTop:"40px"}} >
         <img src={require('./img/events.jpg')} height={'300'} width={'300'} alt='' className="img-h"/>
         <div>
         <h1 style={{paddingLeft:"40px"}} >Title</h1>
@@ -28,8 +28,8 @@ export const Events = ()=>{
         <p style={{paddingLeft:"40px"}}>deadline</p>
         </div>
         </div>
-        <br></br>
-        <div style={{display:"flex"}} >
+       
+        <div style={{display:"flex",paddingTop:"40px"}} >
         <img src={require('./img/events.jpg')} height={'300'} width={'300'} alt='' className="img-h"/>
         <div>
         <h1 style={{paddingLeft:"40px"}} >Title</h1>
