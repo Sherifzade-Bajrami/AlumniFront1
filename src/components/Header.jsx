@@ -104,7 +104,7 @@ export const Header = () => {
           </ul>
           <li className="link-item">
             <a href={"https://localhost:7189/Studentis?id=" + userId}>
-              List of Users
+              Applications
             </a>
           </li>
 
