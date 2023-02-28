@@ -102,12 +102,19 @@ export const Header = () => {
               </>
             ) : null}
           </ul>
-          <li className="link-item">
-            <a href={"https://localhost:7189/Studentis?id=" + userId}>
-              Applications
-            </a>
-          </li>
-
+          {role === "Admin" && token?.length >= 5 ? (
+            <li className="link-item">
+              <a href={"https://localhost:7189/admin"}>Applications</a>
+            </li>
+          ) : role === "User" && token?.length >= 5 ? (
+            <li className="link-item">
+              <a href={"https://localhost:7189/Studentis?id=" + userId}>
+                Applications
+              </a>
+            </li>
+          ) : (
+            ""
+          )}
           {token == null && (
             <li className="link-item">
               <button className="btn">
@@ -115,14 +122,14 @@ export const Header = () => {
               </button>
             </li>
           )}
-          {role === "Admin" && (
+
+          {role === "Admin" && token?.length >= 5 && (
             <li className="link-item">
               <button className="btn">
                 <Link to="/login/registeradmin">Add an admin</Link>
               </button>
             </li>
           )}
-
           {token !== null && (
             <li className="link-item">
               <button type="submit" onClick={() => onSubmit()} className="btn">
